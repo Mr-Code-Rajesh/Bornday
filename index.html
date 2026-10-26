@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday My Love ❤️ | A Special Celebration</title>
+  <meta name="description" content="A magical, romantic, and thoughtful birthday celebration made with love.">
+  
+  <!-- Google Fonts for Luxury & Romantic Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="romantic-theme">
+  <!-- =====================================================================
+       GLOBAL ROMANTIC COUNTDOWN LOCK SCREEN LAYER
+       Unlocks automatically when countdown hits 0 (her born day)
+       OR unlocked via popup passcode "2627"!
+       ===================================================================== -->
+  <div id="global-lock-screen" class="global-lock-layer">
+    <canvas id="lock-petals-canvas"></canvas>
+
+    <!-- Left Side Floating Nicknames & Flowers Cloud (Red box on left) -->
+    <div class="lock-side-cloud lock-cloud-left">
+      <div class="cloud-bubble cb-1"><span>👑</span> Mine Sita</div>
+      <div class="cloud-bubble cb-2"><span>💖</span> Thango</div>
+      <div class="cloud-bubble cb-3"><span>🧸</span> Kutta</div>
+      <div class="cloud-bubble cb-4"><span>😜</span> Sanda Karri</div>
+      <div class="cloud-bubble cb-5"><span>🍯</span> Pattu</div>
+      <div class="cloud-bubble cb-6"><span>🐥</span> Kiddo</div>
+      <div class="cloud-bubble cb-7"><span>💍</span> Wifey</div>
+      <div class="cloud-bubble cb-8"><span>🍬</span> Sweet Heart</div>
+    </div>
+
+    <!-- Right Side Floating Nicknames & Flowers Cloud (Red box on right) -->
+    <div class="lock-side-cloud lock-cloud-right">
+      <div class="cloud-bubble cb-9"><span>💕</span> Chlm</div>
+      <div class="cloud-bubble cb-10"><span>👸</span> Princess Norjahaan</div>
+      <div class="cloud-bubble cb-11"><span>✨</span> Smily Killer</div>
+      <div class="cloud-bubble cb-12"><span>🥰</span> Buji</div>
+      <div class="cloud-bubble cb-13"><span>🌍</span> Mine World</div>
+      <div class="cloud-bubble cb-14"><span>🍼</span> Mine Baby</div>
+      <div class="cloud-bubble cb-15"><span>👰</span> Pondati</div>
+      <div class="cloud-bubble cb-16"><span>❤️</span> My Soul Heart</div>
+    </div>
+
+    <div class="lock-screen-content">
+      <!-- Decorative Floating Flowers & Hearts Cluster -->
+      <div class="lock-floating-decor">
+        <span class="lock-flower lf-1">🌸</span>
+        <span class="lock-flower lf-2">🌹</span>
+        <span class="lock-heart lh-1">💖</span>
+        <span class="lock-flower lf-3">🌺</span>
+        <span class="lock-heart lh-2">💕</span>
+        <span class="lock-flower lf-4">🌷</span>
+      </div>
+
+      <div class="lock-status-badge">
+        <span class="lock-pulse-dot"></span>
+        <i data-lucide="lock" class="lock-icon-mini"></i>
+        <span>Secret Birthday Surprise Locked</span>
+      </div>
+
+      <h1 class="lock-title">
+        Countdown To Your Born Day, <br>
+        <span class="highlight-name">Mine Sita ❤️</span>
+      </h1>
+
+      <p class="lock-subtitle">
+        Something magical is being prepared for you. The full celebration will automatically unlock the exact second your birthday begins...
+      </p>
+
+      <!-- Big Romantic Countdown Clock -->
+      <div class="lock-countdown-box">
+        <div class="lock-cd-grid">
+          <div class="lock-cd-item" id="lock-cd-days-item">
+            <span class="lock-cd-num" id="lock-cd-days">00</span>
+            <span class="lock-cd-lbl">Days</span>
+          </div>
+          <div class="lock-cd-sep" id="lock-cd-days-sep">:</div>
+          <div class="lock-cd-item">
+            <span class="lock-cd-num" id="lock-cd-hours">00</span>
+            <span class="lock-cd-lbl">Hours</span>
+          </div>
+          <div class="lock-cd-sep">:</div>
+          <div class="lock-cd-item">
+            <span class="lock-cd-num" id="lock-cd-mins">00</span>
+            <span class="lock-cd-lbl">Mins</span>
+          </div>
+          <div class="lock-cd-sep">:</div>
+          <div class="lock-cd-item">
+            <span class="lock-cd-num" id="lock-cd-secs">00</span>
+            <span class="lock-cd-lbl">Secs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Steady Deep Romantic Love Message with Nickname Highlights -->
+      <div class="lock-quote-card">
+        <div class="lock-quote-heart">💌</div>
+        <p class="lock-quote-text">
+          "Counting down every second to celebrate the day my entire world was born... You are my today, my tomorrow, and my forever."
+        </p>
+        <div class="lock-nickname-pills-row">
+          <span class="lock-mini-pill">Mine Sita 👑</span>
+          <span class="lock-mini-pill">Thango 💖</span>
+          <span class="lock-mini-pill">Princess Norjahaan 🌸</span>
+          <span class="lock-mini-pill">Chlm 💕</span>
+          <span class="lock-mini-pill">Pattu 🍯</span>
+          <span class="lock-mini-pill">Buji 🥰</span>
+        </div>
+      </div>
+
+      <!-- Unlock Options without displaying passcode on button -->
+      <div class="lock-actions">
+        <button id="open-passcode-modal-btn" class="glow-magic-btn lock-unlock-btn">
+          <i data-lucide="key-round"></i>
+          <span>Enter Secret Passcode 🔐</span>
+        </button>
+        <div class="lock-hint-text">
+          <span>Or wait until the countdown reaches 00:00:00 to auto-unlock! ✨</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASSWORD POPUP MODAL (Secret Code: 2627) -->
+  <div id="passcode-modal" class="modal-overlay hidden">
+    <div class="modal-card passcode-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="heart" class="accent-icon"></i>
+          <h3>Secret Love Passcode</h3>
+        </div>
+        <button class="modal-close-btn" id="close-passcode-modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body text-center">
+        <div class="passcode-lock-icon">🔒</div>
+        <p class="modal-desc">
+          Only my girl knows our special 4-digit code to peek early! Enter passcode below:
+        </p>
+
+        <!-- PIN Input Box -->
+        <div class="pin-input-wrap">
+          <input type="password" id="passcode-input" maxlength="4" placeholder="••••" inputmode="numeric" autocomplete="off">
+        </div>
+
+        <div id="passcode-error-msg" class="passcode-error hidden">
+          ❌ Incorrect code, my love! Try again 😘
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="subtle-tool-btn" id="cancel-passcode-btn">Cancel</button>
+        <button class="glow-magic-btn" id="submit-passcode-btn">
+          <i data-lucide="unlock"></i>
+          <span>Unlock Now 💖</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="petals-canvas"></canvas>
+  <div id="heart-burst-container"></div>
+
+  <!-- Ambient Sound & Personalize Controls -->
+  <header class="top-nav">
+    <div class="brand-badge">
+      <span class="heart-pulse">💖</span>
+      <span class="badge-text" id="header-subtitle">Mine Lithika • Forever & Always</span>
+    </div>
+
+    <div class="nav-actions">
+      <!-- Music Box Player -->
+      <button id="music-toggle-btn" class="nav-btn music-btn" title="Play romantic background melody">
+        <i data-lucide="music"></i>
+        <span class="music-label">Melody: Off</span>
+        <span class="music-waves">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+      <!-- Logout / Lock Website Button -->
+      <button id="lock-screen-btn" class="nav-btn lock-btn" title="Back to Birthday Countdown Lock Screen">
+        <i data-lucide="lock"></i>
+        <span>Lock Page 🔒</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="floating-hearts-halo"></div>
+      
+      <div class="hero-badge">
+        <span class="sparkle-icon">✨</span>
+        <span>Your Born Day Comes Tomorrow! Countdown Is On</span>
+        <span class="sparkle-icon">✨</span>
+      </div>
+
+      <!-- Live Romantic Birthday Countdown Clock -->
+      <div class="bday-countdown-wrap">
+        <div class="countdown-header-tag">
+          <i data-lucide="clock"></i>
+          <span>Official Born Day Countdown</span>
+        </div>
+        <div class="countdown-timer-grid">
+          <div class="countdown-time-box" id="cd-box-days">
+            <span class="countdown-num" id="cd-days">00</span>
+            <span class="countdown-unit">Days</span>
+          </div>
+          <div class="countdown-separator" id="cd-sep-days">:</div>
+          <div class="countdown-time-box">
+            <span class="countdown-num" id="cd-hours">00</span>
+            <span class="countdown-unit">Hours</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-time-box">
+            <span class="countdown-num" id="cd-minutes">00</span>
+            <span class="countdown-unit">Mins</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-time-box">
+            <span class="countdown-num" id="cd-seconds">00</span>
+            <span class="countdown-unit">Secs</span>
+          </div>
+        </div>
+        <div id="countdown-celebration-banner" class="countdown-celebrate-msg hidden">
+          🎉 IT'S FINALLY YOUR BORN DAY! HAPPY BIRTHDAY MY QUEEN! 👑💖
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        Happy Born Day, <br>
+        <span class="highlight-name" id="gf-name-display">Mine Sita</span><span class="hero-title-heart">❤️</span>
+      </h1>
+
+      <!-- Romantic Birthday Hanging Photo Garland with Wooden Clips / Sticks & Different Rotations -->
+      <div class="hanging-garland-wrap">
+        <div class="garland-fairy-string">
+          <div class="string-line"></div>
+          <span class="fairy-bulb fb-1"></span>
+          <span class="fairy-bulb fb-2"></span>
+          <span class="fairy-bulb fb-3"></span>
+          <span class="fairy-bulb fb-4"></span>
+          <span class="fairy-bulb fb-5"></span>
+          <span class="fairy-bulb fb-6"></span>
+          <span class="fairy-bulb fb-7"></span>
+          <span class="fairy-bulb fb-8"></span>
+        </div>
+
+        <!-- Sleek Modern Left/Right Image Change Arrows -->
+        <button id="garland-prev-btn" class="garland-nav-arrow garland-arrow-left" aria-label="Previous photos" title="Previous photo">
+          <i data-lucide="chevron-left"></i>
+        </button>
+
+        <div class="hanging-photos-track" id="nickname-cards-container">
+          <!-- Populated by script.js with wooden clips & unique style rotations -->
+        </div>
+
+        <button id="garland-next-btn" class="garland-nav-arrow garland-arrow-right" aria-label="Next photos" title="Next photo">
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <!-- Modern Glowing Progress Bar & Navigation Indicator -->
+        <div class="garland-modern-nav">
+          <div class="garland-progress-wrap">
+            <div id="garland-progress-bar" class="garland-progress-bar"></div>
+          </div>
+          <div class="garland-hint-pill">
+            <i data-lucide="sparkles"></i>
+            <span>Tap arrows or swipe to explore all 15 moments</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-subtitle" id="gf-custom-tagline">
+        Happy Born Day to my Thango, chlm, pattu & future wifey! Your 1st gift is ready for tomorrow, and an unforgettable 2nd gift is arriving in 10 days! ❤️
+      </p>
+
+      <!-- Love Stats Pills -->
+      <div class="hero-stats-row">
+        <div class="stat-pill">
+          <i data-lucide="calendar-heart"></i>
+          <div>
+            <div class="stat-value" id="days-together-count">365+</div>
+            <div class="stat-label">Days Loving You</div>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i data-lucide="infinity"></i>
+          <div>
+            <div class="stat-value">Infinite</div>
+            <div class="stat-label">Reasons to Smile</div>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i data-lucide="flame"></i>
+          <div>
+            <div class="stat-value">100%</div>
+            <div class="stat-label">My Favorite Human</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#cake-section" class="cta-button primary-cta">
+          <i data-lucide="cake"></i>
+          <span>Make a Birthday Wish</span>
+        </a>
+        <a href="#love-letter-section" class="cta-button secondary-cta">
+          <i data-lucide="mail-heart"></i>
+          <span>Read My Love Letter</span>
+        </a>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll down for your surprises</span>
+        <i data-lucide="chevron-down" class="bounce-arrow"></i>
+      </div>
+    </section>
+
+    <!-- SECTION: Virtual Interactive Birthday Cake -->
+    <section id="cake-section" class="section-card cake-section-wrap">
+      <div class="section-header">
+        <span class="section-eyebrow">Interactive Wish Maker</span>
+        <h2 class="section-title">Blow Out Your Birthday Candles 🎂</h2>
+        <p class="section-desc">Close your eyes, make the sweetest wish in your heart, and tap the candles to blow them out!</p>
+      </div>
+
+      <div class="cake-stage">
+        <!-- Interactive Cake Container -->
+        <div class="cake-container" id="birthday-cake" role="button" tabindex="0" title="Click to blow out the candles and make a wish!">
+          <!-- Plate -->
+          <div class="cake-plate"></div>
+          
+          <!-- Cake Layers -->
+          <div class="cake-layer layer-bottom">
+            <div class="frosting-drips">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="cake-decorations">
+              <span class="berry">🍓</span>
+              <span class="flower">🌸</span>
+              <span class="berry">🍓</span>
+              <span class="flower">🌸</span>
+            </div>
+          </div>
+          
+          <div class="cake-layer layer-top">
+            <div class="frosting-drips mini-drips">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="cake-decorations">
+              <span class="flower">🌹</span>
+              <span class="berry">🍓</span>
+              <span class="flower">🌹</span>
+            </div>
+          </div>
+
+          <!-- Candles Container -->
+          <div class="candles-wrapper" id="candles-group">
+            <div class="candle c-left">
+              <div class="candle-stick"></div>
+              <div class="flame active-flame"></div>
+              <div class="candle-glow"></div>
+            </div>
+            <div class="candle c-center">
+              <div class="candle-stick"></div>
+              <div class="flame active-flame"></div>
+              <div class="candle-glow"></div>
+            </div>
+            <div class="candle c-right">
+              <div class="candle-stick"></div>
+              <div class="flame active-flame"></div>
+              <div class="candle-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cake-action-guide">
+          <button id="blow-candle-btn" class="glow-magic-btn">
+            <i data-lucide="wind"></i>
+            <span id="blow-btn-text">Make a Wish & Blow Candles! 💨</span>
+          </button>
+        </div>
+
+        <!-- Wish Message Reveal (Shown after blowing) -->
+        <div id="wish-success-card" class="wish-success-card hidden">
+          <div class="wish-icon">🎉✨🥳</div>
+          <h3>May All Your Dreams Come True!</h3>
+          <p id="wish-reveal-text">
+            Whatever you wished for, I promise to spend every single day making you feel loved, appreciated, cherished, and unconditionally happy.
+          </p>
+          <div class="wish-subnote">P.S. You look stunning today! 💖</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Sealed Romantic Love Letter -->
+    <section id="love-letter-section" class="section-card letter-section-wrap">
+      <div class="section-header">
+        <span class="section-eyebrow">From My Heart To Yours</span>
+        <h2 class="section-title">A Sealed Love Note 💌</h2>
+        <p class="section-desc">Tap the wax seal to unlock what words usually fail to express.</p>
+      </div>
+
+      <div class="envelope-stage">
+        <!-- Interactive Envelope -->
+        <div class="envelope-box" id="envelope-box">
+          <div class="envelope-flap"></div>
+          <div class="envelope-pocket"></div>
+          
+          <div class="wax-seal" id="wax-seal" title="Click to break the seal!">
+            <span class="seal-inner">❤️</span>
+            <span class="seal-ring"></span>
+          </div>
+
+          <div class="letter-sheet" id="letter-sheet">
+            <div class="letter-paper">
+              <div class="letter-stamp">
+                <i data-lucide="heart-handshake"></i>
+                <span>SEALED WITH LOVE</span>
+              </div>
+              
+              <div class="letter-greeting">Dearest <span class="letter-recipient" id="letter-name">Love</span>,</div>
+              
+              <div class="letter-body" id="letter-body-content">
+                <p>
+                  From the moment you stepped into my life, everything turned into poetry. Your smile has this rare magic that makes even the heaviest days feel light, and your laughter is honestly my favorite song in the entire universe.
+                </p>
+                <p>
+                  Watching you grow, dream, laugh, and shine is the greatest privilege. You are not just kind, hilarious, and breathtakingly gorgeous — you have this rare golden soul that makes everyone around you feel warm and safe.
+                </p>
+                <p>
+                  On this birthday and for all the birthdays to come, I wish you peace, radiant health, wild adventures, and endless joy. I will always be your biggest cheerleader, your softest safe place, and your forever partner in crime.
+                </p>
+                <p class="letter-closing">
+                  Happy Birthday, my beautiful soulmate. <br>
+                  <strong class="letter-signature" id="letter-sender-name">Yours always & forever 💕</strong>
+                </p>
+              </div>
+
+              <button class="close-letter-btn" id="close-letter-btn" title="Fold back letter">
+                <i data-lucide="check"></i> Fold Back
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p class="envelope-hint" id="envelope-hint-text">✨ Tap the red heart wax seal to open ✨</p>
+      </div>
+    </section>
+
+    <!-- SECTION: Memory Lane & Photo Moments -->
+    <section id="memories-section" class="section-card memories-section-wrap">
+      <div class="section-header">
+        <span class="section-eyebrow">Our Unforgettable Story</span>
+        <h2 class="section-title">Our Sweetest Moments 📸</h2>
+        <p class="section-desc">Every moment with you is my new favorite memory. Hover & tap to flip each photo!</p>
+      </div>
+
+      <div class="memory-grid" id="memory-grid">
+        <!-- Photo Cards populated dynamically / with customizable slots -->
+      </div>
+
+      <div class="memory-tools">
+        <button id="add-memory-photo-btn" class="subtle-tool-btn">
+          <i data-lucide="image-plus"></i>
+          <span>Add Our Own Photo</span>
+        </button>
+        <input type="file" id="memory-file-input" accept="image/*" style="display:none;">
+      </div>
+    </section>
+
+    <!-- SECTION: Reasons Why I Love You & Fun Quotes Generator -->
+    <section id="quotes-section" class="section-card quotes-section-wrap">
+      <div class="section-header">
+        <span class="section-eyebrow">A Thousand Little Reasons</span>
+        <h2 class="section-title">Love & Smiles Dispenser 💭</h2>
+        <p class="section-desc">Pick your vibe or click the magic button whenever you need a reminder of how cherished you are.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="quote-categories">
+        <button class="cat-pill active" data-category="all">All Vibes ✨</button>
+        <button class="cat-pill" data-category="romantic">Deep Romantic 🌹</button>
+        <button class="cat-pill" data-category="funny">Cute & Playful 😜</button>
+        <button class="cat-pill" data-category="sweet">Sweet Little Things 🍯</button>
+        <button class="cat-pill" data-category="future">Our Dreams & Future 🌌</button>
+      </div>
+
+      <!-- Dynamic Quote Card -->
+      <div class="quote-display-card">
+        <div class="quote-decor top-left">“</div>
+        <div class="quote-text-container">
+          <p id="active-quote-text" class="quote-main-text">
+            "You are my favorite notification, my sweetest daydream, and the best thing that ever happened to my heart."
+          </p>
+          <span id="active-quote-author" class="quote-tag">— 100% True Fact About You</span>
+        </div>
+        <div class="quote-decor bottom-right">”</div>
+
+        <div class="quote-action-bar">
+          <button id="next-quote-btn" class="glow-magic-btn">
+            <i data-lucide="shuffle"></i>
+            <span>Draw Another Reason 💖</span>
+          </button>
+          <button id="heart-like-quote-btn" class="icon-circle-btn" title="Send love reaction">
+            <i data-lucide="heart"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- "Open When..." Virtual Love Envelopes -->
+      <div class="open-when-section">
+        <h3 class="subsection-title">💌 "Open When..." Virtual Notes</h3>
+        <div class="open-when-grid">
+          <div class="open-when-item" data-note="sad">
+            <div class="open-when-icon">🥺</div>
+            <div class="open-when-title">Open When You Miss Me</div>
+          </div>
+          <div class="open-when-item" data-note="laugh">
+            <div class="open-when-icon">😂</div>
+            <div class="open-when-title">Open When You Need a Laugh</div>
+          </div>
+          <div class="open-when-item" data-note="sleep">
+            <div class="open-when-icon">🌙</div>
+            <div class="open-when-title">Open When You Can't Sleep</div>
+          </div>
+          <div class="open-when-item" data-note="doubt">
+            <div class="open-when-icon">👑</div>
+            <div class="open-when-title">Open When You Feel Insecure</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Fun "Us" Trivia Mini-Game -->
+    <section id="quiz-section" class="section-card quiz-section-wrap">
+      <div class="section-header">
+        <span class="section-eyebrow">Playful & Cute</span>
+        <h2 class="section-title">The "How Well Do You Know Us?" Quiz 🎮</h2>
+        <p class="section-desc">Let's see if you remember our little secrets! No wrong answers (except the ones that make me tease you 😉).</p>
+      </div>
+
+      <div class="quiz-card" id="quiz-card">
+        <div class="quiz-progress-bar">
+          <div class="progress-fill" id="quiz-progress-fill"></div>
+        </div>
+        <div class="quiz-step-counter" id="quiz-step-counter">Question 1 of 4</div>
+        <h3 class="quiz-question" id="quiz-question-text">Who fell harder first?</h3>
+        
+        <div class="quiz-options-list" id="quiz-options-container">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="quiz-feedback hidden" id="quiz-feedback-box">
+          <p id="quiz-feedback-text"></p>
+          <button id="quiz-next-btn" class="glow-magic-btn mini-btn">Next Question →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Birthday Gift & Final Toast -->
+    <section class="section-card gift-section-wrap">
+      <div class="gift-box-showcase">
+        <div class="gift-box" id="mystery-gift-box">
+          <div class="gift-lid">
+            <div class="ribbon-bow">🎀</div>
+          </div>
+          <div class="gift-base">
+            <div class="gift-ribbon-vertical"></div>
+            <div class="gift-ribbon-horizontal"></div>
+          </div>
+        </div>
+        <h3 class="gift-prompt-title">Your Born Day Is Tomorrow! 🎂✨</h3>
+        <p class="gift-prompt-desc">Not only this website... I planned special surprises for you! Tap the box to unlock.</p>
+        
+        <div id="gift-reveal-modal" class="gift-coupon-card hidden">
+          <div class="coupon-header">
+            <span>✨ DOUBLE SURPRISES PLANNED WITH LOVE ✨</span>
+          </div>
+          <h4>Two Special Gifts Are Coming For You! 🎁💝</h4>
+          <p class="gift-main-msg">
+            See, your born day will come tomorrow! This website is not the only thing I made for you — I have planned <strong>another special gift</strong> that you will receive <strong>tomorrow as your 1st Gift</strong>! And that's not all... your <strong>2nd Gift</strong> will take maybe around <strong>10 days</strong> to receive and reach your hands, but I promise with all my heart: <em>you will NEVER, ever forget that gift!</em> 🥰❤️
+          </p>
+
+          <div class="gift-steps-grid">
+            <div class="gift-step-card active-step">
+              <div class="gift-step-header">
+                <i data-lucide="gift"></i>
+                <span>Gift #1 • Tomorrow</span>
+              </div>
+              <div class="gift-step-desc">
+                Your first surprise is ready and waiting for you tomorrow on your Born Day!
+              </div>
+            </div>
+
+            <div class="gift-step-card">
+              <div class="gift-step-header">
+                <i data-lucide="sparkles"></i>
+                <span>Gift #2 • In ~10 Days</span>
+              </div>
+              <div class="gift-step-desc">
+                An unforgettable grand surprise already in transit — takes ~10 days to receive!
+              </div>
+            </div>
+          </div>
+
+          <div class="coupon-barcode">||| |||| || |||||| | ||||| ❤️ FOREVER YOURS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Quick Heart Tap Shower Area -->
+    <footer class="romantic-footer">
+      <p class="footer-love-note">
+        Crafted with every beat of my heart for <span id="footer-gf-name">You</span> ❤️
+      </p>
+      <div class="footer-heart-counter">
+        <span>Hearts sent today: </span>
+        <strong id="sent-hearts-counter">0</strong>
+        <button id="tap-shower-btn" class="heart-pulse-btn" title="Tap to rain hearts!">Tap For Love 💖</button>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Note Modal for "Open When" -->
+  <div id="note-modal" class="modal-overlay hidden">
+    <div class="modal-card note-modal-card">
+      <div class="modal-header">
+        <h3 id="note-modal-title">Love Note</h3>
+        <button class="modal-close-btn" id="close-note-modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="note-modal-content" class="note-modal-text"></p>
+      </div>
+      <div class="modal-footer text-center">
+        <button class="glow-magic-btn" id="hug-note-btn">
+          <i data-lucide="heart"></i> Sending You A Big Hug
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded Nicknames Data (Guarantees instant loading on local file:/// and live web) -->
+  <script id="nicknames-embedded-data" type="application/json">
+[
+  {
+    "id": 1,
+    "nickname": "Mine Sita 👑",
+    "tag": "My Forever Sita",
+    "rot": "-4.5deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036833/Screenshot_2026-10-26-23-12-08-03_99c04817c0de5652397fc8b56c3b3817_gcjn02.jpg",
+    "wish": "To my one and only Sita, happy born day! You make my entire life blessed and complete."
+  },
+  {
+    "id": 2,
+    "nickname": "Thango 💖",
+    "tag": "Pure Gold",
+    "rot": "3.8deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036833/Screenshot_2026-10-26-23-12-37-10_99c04817c0de5652397fc8b56c3b3817_c3k3fn.jpg",
+    "wish": "En Thango, you are the most precious treasure I could ever ask for. Love you endlessly!"
+  },
+  {
+    "id": 3,
+    "nickname": "Princess Norjahaan 🌸",
+    "tag": "My Royal Queen",
+    "rot": "-2.5deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036832/Screenshot_2026-10-26-23-12-50-74_99c04817c0de5652397fc8b56c3b3817_zclwok.jpg",
+    "wish": "Breathtaking, regal, and the queen who rules my heart forever and always!"
+  },
+  {
+    "id": 4,
+    "nickname": "Chlm 💕",
+    "tag": "My Chellam",
+    "rot": "5.2deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036832/Screenshot_2026-10-26-23-13-25-43_99c04817c0de5652397fc8b56c3b3817_cyp6jo.jpg",
+    "wish": "Happy born day en chlm! Your smile is the sweetest thing in the entire world."
+  },
+  {
+    "id": 5,
+    "nickname": "Pattu 🍯",
+    "tag": "Soft & Precious",
+    "rot": "-3.8deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036832/Screenshot_2026-10-26-23-13-01-92_99c04817c0de5652397fc8b56c3b3817_iap4kq.jpg",
+    "wish": "En pattu kutty, sending you a million hugs and sweet kisses on your born day!"
+  },
+  {
+    "id": 6,
+    "nickname": "Smily Killer ✨",
+    "tag": "Deadly Smile",
+    "rot": "4.5deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036831/Screenshot_2026-10-26-23-13-13-34_99c04817c0de5652397fc8b56c3b3817_x1ufbx.jpg",
+    "wish": "One single smile from you and my whole heart melts. You truly are my smily killer!"
+  },
+  {
+    "id": 7,
+    "nickname": "Buji 🥰",
+    "tag": "Cutie Buji",
+    "rot": "-5.5deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036832/Screenshot_2026-10-26-23-13-36-65_99c04817c0de5652397fc8b56c3b3817_lv4i7t.jpg",
+    "wish": "En buji, you bring pure sunshine and laughter into my life every single day."
+  },
+  {
+    "id": 8,
+    "nickname": "Sanda Karri 😜",
+    "tag": "Sweet Fighter",
+    "rot": "3.2deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036831/Screenshot_2026-10-26-23-13-47-31_99c04817c0de5652397fc8b56c3b3817_f1cw7e.jpg",
+    "wish": "Even when you fight or get angry at me, you are still the cutest girl in the universe!"
+  },
+  {
+    "id": 9,
+    "nickname": "Mine Baby 🍼",
+    "tag": "My Little Baby",
+    "rot": "-4deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036831/Screenshot_2026-10-26-23-14-01-38_99c04817c0de5652397fc8b56c3b3817_aqrxzq.jpg",
+    "wish": "I will forever pamper you, protect you, and cherish you like my little baby."
+  },
+  {
+    "id": 10,
+    "nickname": "Kutta 🧸",
+    "tag": "Lovable Kutta",
+    "rot": "4.2deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036830/Screenshot_2026-10-26-23-14-45-85_99c04817c0de5652397fc8b56c3b3817_uehjdz.jpg",
+    "wish": "To my sweet kutta, always by your side holding your hand through every chapter."
+  },
+  {
+    "id": 11,
+    "nickname": "Mine World 🌍",
+    "tag": "My Everything",
+    "rot": "-3.2deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036831/Screenshot_2026-10-26-23-14-27-43_99c04817c0de5652397fc8b56c3b3817_uybt62.jpg",
+    "wish": "Everything begins and ends with you. You are not just a part of my life, you are my world."
+  },
+  {
+    "id": 12,
+    "nickname": "Wifey & Pondati 💍👰",
+    "tag": "Future Wife",
+    "rot": "5deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036830/Screenshot_2026-10-26-23-15-09-28_99c04817c0de5652397fc8b56c3b3817_smj9ms.jpg",
+    "wish": "Happy born day to my beautiful future wifey and pondati! Forever yours."
+  },
+  {
+    "id": 13,
+    "nickname": "Kiddo 🐥",
+    "tag": "Playful Angel",
+    "rot": "3.5deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036830/Screenshot_2026-10-26-23-16-33-05_99c04817c0de5652397fc8b56c3b3817_ga34b0.jpg",
+    "wish": "Never lose that innocent, bubbly smile of yours, my cute kiddo!"
+  },
+  {
+    "id": 14,
+    "nickname": "Sweet Heart 🍬",
+    "tag": "Pure Love",
+    "rot": "-3deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036830/Screenshot_2026-10-26-23-14-57-34_99c04817c0de5652397fc8b56c3b3817_sukzci.jpg",
+    "wish": "Wishing the sweetest girl on earth a day filled with boundless joy and chocolate treats!"
+  },
+  {
+    "id": 15,
+    "nickname": "My Everything 💫",
+    "tag": "My All",
+    "rot": "4deg",
+    "image": "https://res.cloudinary.com/dl7h2uexp/image/upload/v1793036830/Screenshot_2026-10-26-23-14-14-44_99c04817c0de5652397fc8b56c3b3817_jhdr1w.jpg",
+    "wish": "You are my dream come true, my today, my tomorrow, and my forever everything."
+  }
+]
+  </script>
+
+  <!-- Audio Synthesis & Scripts -->
+  <script src="audio.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
