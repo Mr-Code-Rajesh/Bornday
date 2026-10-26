@@ -174,25 +174,9 @@ On this birthday and for all the birthdays to come, I wish you peace, radiant he
         return;
       }
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      if (daysBox && daysSep) {
-        if (days > 0) {
-          daysBox.style.display = 'flex';
-          daysSep.style.display = 'block';
-          if (daysElem) daysElem.textContent = String(days).padStart(2, '0');
-        } else {
-          daysBox.style.display = 'none';
-          daysSep.style.display = 'none';
-        }
-      }
-
-      if (hoursElem) hoursElem.textContent = String(hours).padStart(2, '0');
-      if (minsElem) minsElem.textContent = String(minutes).padStart(2, '0');
-      if (secsElem) secsElem.textContent = String(seconds).padStart(2, '0');
+      if (hoursElem) hoursElem.textContent = '00';
+      if (minsElem) minsElem.textContent = '00';
+      if (secsElem) secsElem.textContent = '00';
     }
 
     update();
@@ -1134,25 +1118,9 @@ On this birthday and for all the birthdays to come, I wish you peace, radiant he
         return;
       }
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      if (lockDaysItem && lockDaysSep) {
-        if (days > 0) {
-          lockDaysItem.style.display = 'flex';
-          lockDaysSep.style.display = 'block';
-          if (lockDays) lockDays.textContent = String(days).padStart(2, '0');
-        } else {
-          lockDaysItem.style.display = 'none';
-          lockDaysSep.style.display = 'none';
-        }
-      }
-
-      if (lockHours) lockHours.textContent = String(hours).padStart(2, '0');
-      if (lockMins) lockMins.textContent = String(minutes).padStart(2, '0');
-      if (lockSecs) lockSecs.textContent = String(seconds).padStart(2, '0');
+      if (lockHours) lockHours.textContent = '00';
+      if (lockMins) lockMins.textContent = '00';
+      if (lockSecs) lockSecs.textContent = '00';
     }
 
     updateLockCountdown();
